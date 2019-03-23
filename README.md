@@ -1,0 +1,2 @@
+# codeAndMagic
+Учебный проект JS
