@@ -45,12 +45,8 @@ var equalizeArr = function (arr1, arr2) {
             arr1.pop();
         } else if (arr1.length != arr2.length) {
             arr2.pop();
-            console.log(i, arr1.length, arr2.length)
         }
     }
-
-    console.log(arr1)
-    console.log(arr2)
 }
 
 equalizeArr(['Маша', 'Даша', 'Саша', 'Ваня'], [100, 200])
@@ -65,12 +61,6 @@ window.renderStatistics = function (ctx, names, times) {
     splitStroke(ctx, 'Ура вы победили!, Список результатов:')
 
     for (var i = 0; i < names.length; i++) {
-
-        //  MAX_BAR             BAR[I]
-        // __________    =    __________
-        // BAR_HEIGHT              // X
-
-        // X = (BAR_HEIGHT * BAR[I]) / MAX_BAR
 
         var barHeight = (MAX_BAR_HEIGHT * times[i])/getMaxElement(times)
         ctx.fillStyle = '#000';
