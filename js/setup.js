@@ -101,7 +101,7 @@ wizardFireball.addEventListener('click', function () {
   fillWizardsFireballColor();
 });
 
-// document.querySelector('.setup-similar').classList.remove('hidden');
+document.querySelector('.setup-similar').classList.remove('hidden');
 
 var generateRandomWizards = function () {
   for (var i = 0; i < COUNT_WIZARDS; i++) {
@@ -115,8 +115,9 @@ var generateRandomWizards = function () {
 };
 
 var generateWizardsElements = function () {
+  var wizardElement;
   for (var i = 0; i < COUNT_WIZARDS; i++) {
-    var wizardElement = similarWizardTemplate.cloneNode(true);
+    wizardElement = similarWizardTemplate.cloneNode(true);
     wizardElement.querySelector('.setup-similar-label').textContent = wizards[i].firstName + ' ' + wizards[i].lastName;
     wizardElement.querySelector('.wizard-coat').style.fill = wizards[i].coatColor;
     wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
